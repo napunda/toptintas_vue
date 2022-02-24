@@ -5,6 +5,9 @@ import router from "./router";
 import VuexRest from "./plugins/vuex-rest";
 import VueGrid from "@sneverton/vue-grid";
 import "@sneverton/vue-grid/dist/vue-grid.css";
+import vuetify from "./plugins/vuetify";
+import "roboto-fontface/css/roboto/roboto-fontface.css";
+import "@fortawesome/fontawesome-free/css/all.css";
 
 const server =
   process.env.NODE_ENV === "development"
@@ -31,5 +34,6 @@ Vue.mixin({
 new Vue({
   router,
   store: new Vuex.Store(),
+  vuetify,
   render: (h) => h(App),
 }).$mount("#app");
