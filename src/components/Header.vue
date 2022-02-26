@@ -1,46 +1,55 @@
 <template>
-  <header>
-    <div class="subheader">
-      <div class="container subheader">
-        <ul id="icons">
-          <li v-for="item in items" :key="item.icon">
-            <a :href="item.link">
-              <v-icon>
-                {{ item.icon }}
-              </v-icon>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <!-- <v-app-bar class="" height="104px" flat>
-      <v-container class="d-flex flex-row pa-0">
-        <img
-          id="logo"
-          src="/img/logo-top-tintas.png"
-          height="80px"
-          alt=""
-          class="py-2"
-        />
-        <v-spacer></v-spacer>
-        <app-bar id="nav">
-          <v-btn :to="menu.link" v-for="menu in menus" :key="menu.title" text>
+  <v-app>
+    <v-sheet color="grey darken-4" height="47" class="d-flex align-center">
+      <v-container d-flex justify-end>
+        <v-btn
+          v-for="item in items"
+          :key="item.icon"
+          text
+          icon
+          :to="item.link"
+          target="_blank"
+        >
+          <v-icon size="small" color="#fff">
+            {{ item.icon }}
+          </v-icon>
+        </v-btn>
+      </v-container>
+    </v-sheet>
+    <v-sheet height="104" class="justify-space-between" color=" pt-2 ">
+      <v-container d-flex justify-end>
+        <router-link to="/"
+          ><v-img
+            class="shrink mr-2"
+            alt="TopTintas"
+            src="/img/logo-top-tintas.png"
+            width="200"
+            contain
+            transition="scale-transition"
+          >
+          </v-img
+        ></router-link>
+
+        <v-toolbar
+          flat
+          class="d-flex align-center d-flex justify-end font-menu"
+        >
+          <v-btn
+            class="pa-2"
+            x-large
+            :to="menu.route"
+            v-for="menu in menus"
+            :key="menu.title"
+            text
+            tag
+            color="grey darken-1"
+          >
             {{ menu.title }}
           </v-btn>
-        </app-bar>
+        </v-toolbar>
       </v-container>
-    </v-app-bar> -->
-    <div class="header container">
-      <img height="90px" src="/img/logo-top-tintas.png" alt="" />
-      <ul id="nav">
-        <li v-for="menu in menus" :key="menu.title">
-          <a :href="menu.link">
-            {{ menu.title }}
-          </a>
-        </li>
-      </ul>
-    </div>
-  </header>
+    </v-sheet>
+  </v-app>
 </template>
 
 <script>
@@ -48,11 +57,11 @@ export default {
   name: "Header",
   data: () => ({
     menus: [
-      { title: "HOME", link: "#" },
-      { title: "A EMPRESA", link: "#" },
-      { title: "PRODUTOS", link: "#" },
-      { title: "MARCAS", link: "#" },
-      { title: "FALE CONOSCO", link: "#" },
+      { title: "HOME", route: "/" },
+      { title: "A EMPRESA", route: "/a-empresa" },
+      { title: "PRODUTOS", route: "/produtos" },
+      { title: "MARCAS", route: "/marcas" },
+      { title: "FALE CONOSCO", route: "/fale-conosco" },
     ],
 
     items: [
@@ -66,62 +75,8 @@ export default {
   }),
 };
 </script>
-
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;500;700&display=swap");
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-}
-
-.subheader {
-  height: 47px;
-  width: 100%;
-  background-color: #343434;
-  display: flex;
-  justify-content: right;
-  align-items: center;
-}
-
-.subheader ul {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  margin-right: 0rem;
-}
-
-.subheader ul li {
-  margin-left: 1.5rem;
-}
-
-.subheader i {
-  color: white;
-  font-size: 16px;
-}
-
-.header {
-  width: 100%;
-  height: 104px;
-  display: flex;
-  justify-content: right;
-  align-items: center;
-}
-
-.header ul {
-  display: flex;
-}
-
-.header ul li a {
-  list-style: none;
-  margin-left: 2rem;
+.font-menu {
   font-family: "Josefin Sans", sans-serif;
-  font-size: 15px;
-  color: #6e6e6e;
-}
-
-.header ul li {
-  list-style: none;
 }
 </style>
