@@ -1,8 +1,9 @@
 <template>
-  <div class="app">
+  <v-app>
     <Header />
+    <router-view></router-view>
     <Footer />
-  </div>
+  </v-app>
 </template>
 <script>
 import Header from "./components/Header.vue";
@@ -21,7 +22,11 @@ export default {
   }),
 };
 </script>
+
 <style>
+.josefin-sans {
+  font-family: "Josefin Sans", sans-serif;
+}
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1194px !important;

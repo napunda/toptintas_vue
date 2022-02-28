@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <div class="header">
     <v-sheet color="grey darken-4" height="47" class="d-flex align-center">
       <v-container d-flex justify-end>
         <v-btn
@@ -16,8 +16,8 @@
         </v-btn>
       </v-container>
     </v-sheet>
-    <v-sheet height="104" class="justify-space-between" color=" pt-2 ">
-      <v-container d-flex justify-end>
+    <v-sheet height="104px" class="justify-space-between align-center">
+      <v-container class="py-0 h-100" d-flex align-center>
         <router-link to="/"
           ><v-img
             class="shrink mr-2"
@@ -25,17 +25,13 @@
             src="/img/logo-top-tintas.png"
             width="200"
             contain
-            transition="scale-transition"
           >
           </v-img
         ></router-link>
 
-        <v-toolbar
-          flat
-          class="d-flex align-center d-flex justify-end font-menu"
-        >
+        <v-toolbar flat class="d-flex align-center justify-end">
           <v-btn
-            class="pa-2"
+            class="pa-2 josefin-sans"
             x-large
             :to="menu.route"
             v-for="menu in menus"
@@ -49,7 +45,7 @@
         </v-toolbar>
       </v-container>
     </v-sheet>
-  </v-app>
+  </div>
 </template>
 
 <script>
@@ -76,7 +72,7 @@ export default {
 };
 </script>
 <style scoped>
-.font-menu {
-  font-family: "Josefin Sans", sans-serif;
+.h-100 {
+  height: 100%;
 }
 </style>
