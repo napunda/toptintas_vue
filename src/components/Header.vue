@@ -22,7 +22,7 @@
           ><v-img
             class="shrink mr-2"
             alt="TopTintas"
-            src="/img/logo-top-tintas.png"
+            :src="logo"
             width="200"
             contain
           >
@@ -68,6 +68,7 @@ export default {
       { icon: "fab fa-facebook-f", link: "//facebook.com" },
       { icon: "fab fa-instagram", link: "//facebook.com" },
     ],
+    logo: "/img/logo-top-tintas.png",
   }),
 };
 </script>

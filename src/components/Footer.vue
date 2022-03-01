@@ -6,10 +6,10 @@
           <v-list-item class="white--text text-h6">Contato</v-list-item>
           <v-list-item-group v-model="selectedItem" color="primary">
             <v-list-item
-              target="_blank"
-              :to="item.link"
+              :target="item.target"
+              :href="item.link"
               class="white--text"
-              v-for="(item, i) in items"
+              v-for="(item, i) in contacts"
               :key="i"
             >
               <v-list-item-icon>
@@ -23,12 +23,16 @@
         </v-list>
         <v-spacer />
         <v-list flat color="transparent">
-          <v-list-item class="text-h6 white--text">Rede Sociais</v-list-item>
-          <v-btn target="_blank" to="//facebook.com" text icon>
-            <v-icon color="white">fa fa-facebook-f</v-icon>
-          </v-btn>
-          <v-btn target="_blank" to="//instagram.com" text icon>
-            <v-icon color="white">fa-instagram</v-icon>
+          <v-list-item class="text-h6 white--text">Redes Sociais</v-list-item>
+          <v-btn
+            v-for="(social, i) in socials"
+            :key="i"
+            target="_blank"
+            :href="social.link"
+            text
+            icon
+          >
+            <v-icon color="white">{{ social.icon }}</v-icon>
           </v-btn>
         </v-list>
         <v-spacer />
@@ -60,22 +64,29 @@
 export default {
   name: "Footer",
   data: () => ({
-    items: [
+    contacts: [
       {
         text: "(66) 99720-2020",
         icon: "fab fa-whatsapp",
         link: "//facebook.com",
+        target: "_blank",
       },
       {
         text: "toptintas@toptintas.com",
         icon: "fas fa-envelope",
-        link: "//toptintas@toptintas.com",
+        link: "mailto:toptintas@toptintas.com",
+        target: "_self",
       },
       {
         text: "Av. dos Tarumãs, 1205 Jardim Botânico, Sinop - MT",
         icon: "fas fa-map-marker-alt",
         link: "//facebook.com",
+        target: "_blank",
       },
+    ],
+    socials: [
+      { icon: "fab fa-facebook-f", link: "//facebook.com" },
+      { icon: "fab fa-instagram", link: "//instagram.com" },
     ],
   }),
 };
