@@ -1,19 +1,19 @@
 <template>
   <div class="home">
     <Slide />
-    <Brands />
+    <BrandsSlider />
   </div>
 </template>
 
 <script>
 import Slide from "../components/Slide.vue";
-import Brands from "../components/Brands.vue";
+import BrandsSlider from "../components/BrandsSlider.vue";
 export default {
   name: "Home",
 
   components: {
     Slide,
-    Brands,
+    BrandsSlider,
   },
 };
 </script>
