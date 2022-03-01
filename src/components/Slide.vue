@@ -1,6 +1,6 @@
 <template>
   <div class="slide">
-    <v-carousel height="750px" hide-delimiters>
+    <v-carousel height="750px" hide-delimiters show-arrows-on-hover>
       <v-carousel-item
         v-for="(item, i) in items"
         :key="i"

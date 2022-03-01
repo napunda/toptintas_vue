@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    <v-footer height="280" color="grey darken-4">
+    <v-footer height="260" color="grey darken-4">
       <v-container d-flex justify-center>
         <v-list flat color="transparent">
           <v-list-item class="white--text text-h6">Contato</v-list-item>
@@ -36,27 +36,29 @@
           </v-btn>
         </v-list>
         <v-spacer />
-        <v-sheet
-          color="transparent"
-          class="align-center d-flex flex-column justify-end"
-        >
+        <v-sheet color="transparent" class="align-center d-flex flex-column">
           <router-link to="//mrxweb.com.br" target="_blank">
             <v-img
               light
               class="shrink mr-4"
               alt="TopTintas"
               src="/img/logo-mrx.svg"
-              width="180"
+              width="60"
               contain
             >
             </v-img>
           </router-link>
-          <p class="white--text">
-            © 2021 TOP Tintas - Todos os direitos reservados.
-          </p>
         </v-sheet>
       </v-container>
     </v-footer>
+    <v-sheet color="grey darken-3" height="47px">
+      <v-container class="d-flex justify-center h-100">
+        <p class="white--text">
+          © {{ new Date().getFullYear() }} TOP Tintas - Todos os direitos
+          reservados.
+        </p>
+      </v-container>
+    </v-sheet>
   </div>
 </template>
 
@@ -91,4 +93,8 @@ export default {
   }),
 };
 </script>
-<style scoped></style>
+<style scoped>
+.h-100 {
+  height: 100%;
+}
+</style>

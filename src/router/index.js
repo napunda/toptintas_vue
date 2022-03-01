@@ -1,18 +1,18 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import Brands from "../views/Brands.vue";
 import Company from "../views/Company.vue";
 import ContacUs from "../views/ContactUs.vue";
+import Home from "../views/Home.vue";
 import Product from "../views/Product.vue";
-import Brands from "../views/Brands.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/",
-    name: "Home",
-    component: Home,
+    path: "/marcas",
+    name: "Brands",
+    component: Brands,
   },
   {
     path: "/a-empresa",
@@ -20,19 +20,19 @@ const routes = [
     component: Company,
   },
   {
-    path: "/fale-conos",
+    path: "/fale-conosco",
     name: "ContactUs",
     component: ContacUs,
+  },
+  {
+    path: "/",
+    name: "Home",
+    component: Home,
   },
   {
     path: "/produtos",
     name: "Product",
     component: Product,
-  },
-  {
-    path: "/marcas",
-    name: "Brands",
-    component: Brands,
   },
 ];
 

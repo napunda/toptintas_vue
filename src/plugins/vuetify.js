@@ -19,6 +19,7 @@ export default new Vuetify({
         warning: "#FFC107",
         grey: {
           darken4: "#343434",
+          darken3: "#242424",
           darken1: "#6E6E6E",
         },
       },

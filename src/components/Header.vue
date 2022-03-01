@@ -16,7 +16,11 @@
         </v-btn>
       </v-container>
     </v-sheet>
-    <v-sheet height="104px" class="justify-space-between align-center">
+    <v-sheet
+      height="104px"
+      class="justify-space-between align-center"
+      elevation="3"
+    >
       <v-container class="py-0 h-100" d-flex align-center>
         <router-link to="/"
           ><v-img
