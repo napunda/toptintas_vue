@@ -40,7 +40,7 @@
           <router-link to="//mrxweb.com.br" target="_blank">
             <v-img
               light
-              class="shrink mr-4"
+              class="shrink mr-4 mt-6"
               alt="TopTintas"
               src="/img/logo-mrx.svg"
               width="60"

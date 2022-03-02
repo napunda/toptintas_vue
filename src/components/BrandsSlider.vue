@@ -5,12 +5,12 @@
         <v-sheet class="mx-auto" color="transparent">
           <v-slide-group multiple show-arrows>
             <v-slide-item>
-              <v-btn rounded class="mx-2" height="150px" text>
-                <img src="/img/Atlas.png" alt="" height="100px" />
+              <v-btn rounded class="mx-2" height="130px" text>
+                <img src="/img/Atlas.png" alt="" height="130px" />
               </v-btn>
             </v-slide-item>
             <v-slide-item>
-              <v-btn rounded class="mx-2" height="150px" text>
+              <v-btn rounded class="mx-2" height="130px" text>
                 <img src="/img/resicolor-tintas.png" alt="" width="130px" />
               </v-btn>
             </v-slide-item>
@@ -110,8 +110,6 @@ export default {
 <style scoped>
 .carrousel-background {
   background-image: url("/img/brands-background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 img {
   filter: grayscale(100%);
