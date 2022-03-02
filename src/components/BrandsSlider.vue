@@ -2,15 +2,100 @@
   <div class="brand">
     <div class="carrousel-background">
       <v-container>
-        <v-carousel height="200px" hide-delimiters>
-          <v-carousel-item
-            v-for="(item, i) in items"
-            :key="i"
-            :src="item.src"
-            reverse-transition="fade-transition"
-            transition="fade-transition"
-          ></v-carousel-item>
-        </v-carousel>
+        <v-sheet class="mx-auto" color="transparent">
+          <v-slide-group multiple show-arrows>
+            <v-slide-item>
+              <v-btn rounded class="mx-2" height="150px" text>
+                <img src="/img/Atlas.png" alt="" height="100px" />
+              </v-btn>
+            </v-slide-item>
+            <v-slide-item>
+              <v-btn rounded class="mx-2" height="150px" text>
+                <img src="/img/resicolor-tintas.png" alt="" width="130px" />
+              </v-btn>
+            </v-slide-item>
+            <v-slide-item>
+              <v-btn rounded class="mx-2" height="150px" text>
+                <img src="/img/Atlas.png" alt="" height="130px" />
+              </v-btn>
+            </v-slide-item>
+            <v-slide-item>
+              <v-btn rounded class="mx-2" height="150px" text>
+                <img src="/img/Atlas.png" alt="" height="130px" />
+              </v-btn>
+            </v-slide-item>
+            <v-slide-item>
+              <v-btn rounded class="mx-2" height="150px" text>
+                <img src="/img/Atlas.png" alt="" height="130px" />
+              </v-btn>
+            </v-slide-item>
+            <v-slide-item>
+              <v-btn rounded class="mx-2" height="150px" text>
+                <img src="/img/Atlas.png" alt="" height="130px" />
+              </v-btn>
+            </v-slide-item>
+            <v-slide-item>
+              <v-btn rounded class="mx-2" height="150px" text>
+                <img src="/img/Atlas.png" alt="" height="130px" />
+              </v-btn>
+            </v-slide-item>
+            <v-slide-item>
+              <v-btn rounded class="mx-2" height="150px" text>
+                <img src="/img/Atlas.png" alt="" height="130px" />
+              </v-btn>
+            </v-slide-item>
+            <v-slide-item>
+              <v-btn rounded class="mx-2" height="150px" text>
+                <img src="/img/Atlas.png" alt="" height="130px" />
+              </v-btn>
+            </v-slide-item>
+            <v-slide-item>
+              <v-btn rounded class="mx-2" height="150px" text>
+                <img src="/img/Atlas.png" alt="" height="130px" />
+              </v-btn>
+            </v-slide-item>
+            <v-slide-item>
+              <v-btn rounded class="mx-2" height="150px" text>
+                <img src="/img/Atlas.png" alt="" height="130px" />
+              </v-btn>
+            </v-slide-item>
+            <v-slide-item>
+              <v-btn rounded class="mx-2" height="150px" text>
+                <img src="/img/Atlas.png" alt="" height="130px" />
+              </v-btn>
+            </v-slide-item>
+            <v-slide-item>
+              <v-btn rounded class="mx-2" height="150px" text>
+                <img src="/img/Atlas.png" alt="" height="130px" />
+              </v-btn>
+            </v-slide-item>
+            <v-slide-item>
+              <v-btn rounded class="mx-2" height="150px" text>
+                <img src="/img/Atlas.png" alt="" height="130px" />
+              </v-btn>
+            </v-slide-item>
+            <v-slide-item>
+              <v-btn rounded class="mx-2" height="150px" text>
+                <img src="/img/Atlas.png" alt="" height="130px" />
+              </v-btn>
+            </v-slide-item>
+            <v-slide-item>
+              <v-btn rounded class="mx-2" height="150px" text>
+                <img src="/img/Atlas.png" alt="" height="130px" />
+              </v-btn>
+            </v-slide-item>
+            <v-slide-item>
+              <v-btn rounded class="mx-2" height="150px" text>
+                <img src="/img/Atlas.png" alt="" height="130px" />
+              </v-btn>
+            </v-slide-item>
+            <v-slide-item>
+              <v-btn rounded class="mx-2" height="150px" text>
+                <img src="/img/Atlas.png" alt="" height="130px" />
+              </v-btn>
+            </v-slide-item>
+          </v-slide-group>
+        </v-sheet>
       </v-container>
     </div>
   </div>
@@ -18,27 +103,21 @@
 <script>
 export default {
   data() {
-    return {
-      items: [
-        {
-          src: "https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg",
-        },
-        {
-          src: "https://cdn.vuetifyjs.com/images/carousel/sky.jpg",
-        },
-        {
-          src: "https://cdn.vuetifyjs.com/images/carousel/bird.jpg",
-        },
-        {
-          src: "https://cdn.vuetifyjs.com/images/carousel/planet.jpg",
-        },
-      ],
-    };
+    return {};
   },
 };
 </script>
 <style scoped>
 .carrousel-background {
   background-image: url("/img/brands-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+img {
+  filter: grayscale(100%);
+  transition: 0.8s;
+}
+img:hover {
+  filter: grayscale(0%);
 }
 </style>
