@@ -3,95 +3,35 @@
     <div class="carrousel-background">
       <v-container>
         <v-sheet class="mx-auto" color="transparent">
-          <v-slide-group multiple show-arrows>
+          <v-slide-group multiple show-arrows loop>
             <v-slide-item>
-              <v-btn rounded class="mx-2" height="130px" text>
-                <img src="/img/Atlas.png" alt="" height="130px" />
+              <v-btn rounded class="mx-2" text height="150px">
+                <img src="/img/Atlas.png" alt="" width="150px" />
               </v-btn>
             </v-slide-item>
             <v-slide-item>
-              <v-btn rounded class="mx-2" height="130px" text>
-                <img src="/img/resicolor-tintas.png" alt="" width="130px" />
+              <v-btn rounded class="mx-2" text height="150px">
+                <img src="/img/resicolor-tintas.png" alt="" width="150px" />
               </v-btn>
             </v-slide-item>
             <v-slide-item>
-              <v-btn rounded class="mx-2" height="150px" text>
-                <img src="/img/Atlas.png" alt="" height="130px" />
+              <v-btn rounded class="mx-2" text height="150px">
+                <img src="/img/coral.png" alt="" width="150px" />
               </v-btn>
             </v-slide-item>
             <v-slide-item>
-              <v-btn rounded class="mx-2" height="150px" text>
-                <img src="/img/Atlas.png" alt="" height="130px" />
+              <v-btn rounded class="mx-2" text height="150px">
+                <img src="/img/sayerlack.jpg" alt="" width="150px" />
               </v-btn>
             </v-slide-item>
             <v-slide-item>
-              <v-btn rounded class="mx-2" height="150px" text>
-                <img src="/img/Atlas.png" alt="" height="130px" />
+              <v-btn rounded class="mx-2" text height="150px">
+                <img src="/img/sparlack.png" alt="" width="150px" />
               </v-btn>
             </v-slide-item>
             <v-slide-item>
-              <v-btn rounded class="mx-2" height="150px" text>
-                <img src="/img/Atlas.png" alt="" height="130px" />
-              </v-btn>
-            </v-slide-item>
-            <v-slide-item>
-              <v-btn rounded class="mx-2" height="150px" text>
-                <img src="/img/Atlas.png" alt="" height="130px" />
-              </v-btn>
-            </v-slide-item>
-            <v-slide-item>
-              <v-btn rounded class="mx-2" height="150px" text>
-                <img src="/img/Atlas.png" alt="" height="130px" />
-              </v-btn>
-            </v-slide-item>
-            <v-slide-item>
-              <v-btn rounded class="mx-2" height="150px" text>
-                <img src="/img/Atlas.png" alt="" height="130px" />
-              </v-btn>
-            </v-slide-item>
-            <v-slide-item>
-              <v-btn rounded class="mx-2" height="150px" text>
-                <img src="/img/Atlas.png" alt="" height="130px" />
-              </v-btn>
-            </v-slide-item>
-            <v-slide-item>
-              <v-btn rounded class="mx-2" height="150px" text>
-                <img src="/img/Atlas.png" alt="" height="130px" />
-              </v-btn>
-            </v-slide-item>
-            <v-slide-item>
-              <v-btn rounded class="mx-2" height="150px" text>
-                <img src="/img/Atlas.png" alt="" height="130px" />
-              </v-btn>
-            </v-slide-item>
-            <v-slide-item>
-              <v-btn rounded class="mx-2" height="150px" text>
-                <img src="/img/Atlas.png" alt="" height="130px" />
-              </v-btn>
-            </v-slide-item>
-            <v-slide-item>
-              <v-btn rounded class="mx-2" height="150px" text>
-                <img src="/img/Atlas.png" alt="" height="130px" />
-              </v-btn>
-            </v-slide-item>
-            <v-slide-item>
-              <v-btn rounded class="mx-2" height="150px" text>
-                <img src="/img/Atlas.png" alt="" height="130px" />
-              </v-btn>
-            </v-slide-item>
-            <v-slide-item>
-              <v-btn rounded class="mx-2" height="150px" text>
-                <img src="/img/Atlas.png" alt="" height="130px" />
-              </v-btn>
-            </v-slide-item>
-            <v-slide-item>
-              <v-btn rounded class="mx-2" height="150px" text>
-                <img src="/img/Atlas.png" alt="" height="130px" />
-              </v-btn>
-            </v-slide-item>
-            <v-slide-item>
-              <v-btn rounded class="mx-2" height="150px" text>
-                <img src="/img/Atlas.png" alt="" height="130px" />
+              <v-btn rounded class="mx-2" text height="150px">
+                <img src="/img/sherwin-williams.png" alt="" width="150px" />
               </v-btn>
             </v-slide-item>
           </v-slide-group>
@@ -111,11 +51,12 @@ export default {
 .carrousel-background {
   background-image: url("/img/brands-background.jpg");
 }
-img {
+
+.v-btn {
   filter: grayscale(100%);
   transition: 0.8s;
 }
-img:hover {
+.v-btn:hover {
   filter: grayscale(0%);
 }
 </style>

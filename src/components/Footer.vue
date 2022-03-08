@@ -37,7 +37,7 @@
         </v-list>
         <v-spacer />
         <v-sheet color="transparent" class="align-center d-flex flex-column">
-          <router-link to="//mrxweb.com.br" target="_blank">
+          <router-link href="//mrxweb.com.br" target="_blank">
             <v-img
               light
               class="shrink mr-4 mt-6"
