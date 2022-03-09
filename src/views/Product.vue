@@ -1,5 +1,3 @@
 <template>
-  <div class="products">
-    <h1>This is an about page</h1>
-  </div>
+  <div class="products"></div>
 </template>

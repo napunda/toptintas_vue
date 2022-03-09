@@ -11,7 +11,6 @@
             <h1 class="mb-6">A EMPRESA</h1>
             <img src="/img/after-title.png" width="70%" />
           </div>
-          <Titles />
         </v-sheet>
         <v-sheet
           width="50%"
@@ -34,11 +33,8 @@
   </div>
 </template>
 <script>
-import Titles from "./Titles.vue";
 export default {
-  components: {
-    Titles,
-  },
+  components: {},
 };
 </script>
 

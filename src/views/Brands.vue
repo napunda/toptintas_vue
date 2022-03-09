@@ -1,10 +1,4 @@
 <template>
-  <div class="brands">
-    <h1>This is an about page</h1>
-  </div>
+  <div class="brands"></div>
 </template>
-<style scoped>
-.brands {
-  height: 900px;
-}
-</style>
+<style scoped></style>
