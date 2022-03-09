@@ -94,6 +94,11 @@ h1 {
   text-align: center;
   align-items: center;
   align-content: center;
+  padding-top: 0px !important;
+}
+.v-img {
+  margin-top: -100px !important;
+  /* object-fit: contain; <----- */
 }
 .produtcs {
   background-image: blue;
