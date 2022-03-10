@@ -1,86 +1,86 @@
 <template>
   <div class="products">
-    <v-container>
-      <div class="d-flex flex-column justify-center align-center mb-6">
-        <h1 class="mb-6">PRODUTOS</h1>
-        <img src="/img/after-title.png" width="" />
+    <v-container class="d-flex flex-column">
+      <div class="d-flex flex-column justify-center align-center title">
+        <h1 class="mb-5">PRODUTOS</h1>
+        <img src="/img/after-title.png" class="mt-1" />
         <p class="mt-6">
           Escolha uma categoria abaixo e conheça nossos produtos!
         </p>
       </div>
       <v-row align="center">
-        <v-col cols="3"
+        <!-- <v-col cols="3"
           ><v-card class="pa-8" to="/produtos">
-            <v-img
-              height="250"
-              src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
-            ></v-img>
-            <div class="d-flex justify-center">
+            <div class="img-card">
+              <img src="/img/01.png" height="100%" />
+            </div>
+
+            <div class="d-flex justify-center card-title">
               <v-card-title>Vernizes</v-card-title>
             </div>
             <v-card-text class="pa-4"
-              >Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Inventore perspiciatis ab nobis numquam hic doloribus nulla ullam!
-              Delectus nulla, enim eos vitae similique accusantium eius non
-              obcaecati, dolores neque mollitia!</v-card-text
-            ></v-card
-          ></v-col
-        >
-        <v-col cols="3"
-          ><v-card class="pa-8" to="/produtos">
-            <v-img
-              height="250"
-              src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
-            ></v-img>
-            <div class="d-flex justify-center">
-              <v-card-title>Tintas</v-card-title>
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor
+            </v-card-text></v-card
+          >
+        </v-col> -->
+        <v-col cols="3" v-for="(product, i) in products" :key="i">
+          <v-card class="pa-8" to="/produtos">
+            <div class="img-card">
+              <img :src="product.img" height="100%" />
             </div>
-            <v-card-text
-              >Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Inventore perspiciatis ab nobis numquam hic doloribus nulla ullam!
-              Delectus nulla, enim eos vitae similique accusantium eius non
-              obcaecati, dolores neque mollitia!</v-card-text
-            ></v-card
-          ></v-col
-        >
-        <v-col cols="3"
-          ><v-card class="pa-8" to="/produtos">
-            <v-img
-              height="250"
-              src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
-            ></v-img>
-            <div class="d-flex justify-center">
-              <v-card-title>Complementos</v-card-title>
+            <div class="d-flex justify-center card-title">
+              <v-card-title>{{ product.titleCard }}</v-card-title>
             </div>
-            <v-card-text
-              >Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Inventore perspiciatis ab nobis numquam hic doloribus nulla ullam!
-              Delectus nulla, enim eos vitae similique accusantium eius non
-              obcaecati, dolores neque mollitia!</v-card-text
-            ></v-card
-          ></v-col
-        >
-        <v-col cols="3"
-          ><v-card class="pa-8" to="/produtos">
-            <v-img
-              height="250"
-              src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
-            ></v-img>
-            <div class="d-flex justify-center">
-              <v-card-title>Esmaltes</v-card-title>
+            <div>
+              <v-card-text class="pa-4">{{
+                product.descriptionCard
+              }}</v-card-text>
             </div>
-            <v-card-text
-              >Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Inventore perspiciatis ab nobis numquam hic doloribus nulla ullam!
-              Delectus nulla, enim eos vitae similique accusantium eius non
-              obcaecati, dolores neque mollitia!</v-card-text
-            ></v-card
-          ></v-col
-        >
+          </v-card>
+        </v-col>
       </v-row>
+      <div class="d-flex justify-center my-10">
+        <v-btn to="/produtos" rounded color="primary"> Ver todos </v-btn>
+      </div>
     </v-container>
   </div>
 </template>
+
+<script>
+export default {
+  name: "Footer",
+  data: () => ({
+    products: [
+      {
+        img: "/img/01.png",
+        titleCard: "Vernizes",
+        descriptionCard:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ",
+      },
+      {
+        img: "/img/02.png",
+        titleCard: "Tintas",
+        descriptionCard:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ",
+      },
+      {
+        img: "/img/03.png",
+        titleCard: "Complementos",
+        descriptionCard:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ",
+      },
+      {
+        img: "/img/04.png",
+        titleCard: "Esmaltes",
+        descriptionCard:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ",
+      },
+    ],
+  }),
+};
+</script>
+
 <style scoped>
 h1 {
   font-weight: 300;
@@ -96,11 +96,16 @@ h1 {
   align-content: center;
   padding-top: 0px !important;
 }
-.v-img {
-  margin-top: -100px !important;
-  /* object-fit: contain; <----- */
+img {
+  margin-top: -80px;
 }
-.produtcs {
-  background-image: blue;
+.card-title {
+  margin-top: -60px;
+}
+.title {
+  margin-bottom: 120px;
+}
+.img-card {
+  height: 180px !important;
 }
 </style>

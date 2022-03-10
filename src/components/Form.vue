@@ -1,22 +1,39 @@
 <template>
   <div class="form">
     <v-sheet height="600px" color="transparent" class="d-flex justify-end">
-      <v-sheet height="600px" width="50%" color="transparent">
+      <v-sheet height="600px" width="50%" color="primary">
         <v-form ref="form" v-model="valid" lazy-validation>
-          <v-row>
+          <v-row align="center">
             <v-col sm="6">
-              Nome:
+              <v-row>
+                <v-col cols="6">
+                  <label for="nameid">Nome:</label>
+                  <v-text-field
+                    id="nameid"
+                    solo
+                    outlined
+                    v-model="name"
+                    :rules="nameRules"
+                    label=""
+                    required
+                  ></v-text-field>
+                </v-col>
+                <v-col cols="6">
+                  <label for="lastnameid">Sobrenome:</label>
+                  <v-text-field
+                    id="lastnameid"
+                    solo
+                    outlined
+                    v-model="lastname"
+                    :rules="lastnameRules"
+                    label=""
+                    required
+                  ></v-text-field>
+                </v-col>
+              </v-row>
+              <label for="mailid">E-mail:</label>
               <v-text-field
-                solo
-                outlined
-                v-model="name"
-                :counter="30"
-                :rules="nameRules"
-                label=""
-                required
-              ></v-text-field>
-              E-mail
-              <v-text-field
+                id="mailid"
                 solo
                 outlined
                 v-model="email"
@@ -24,36 +41,29 @@
                 label=""
                 required
               ></v-text-field>
+              <label for="messageid">Mensagem:</label>
               <v-textarea
+                id="messageid"
                 outlined
+                no-resize
+                messages
                 solo
                 name="input-7-4"
-                label="Outlined textarea"
-                value="Sua mensagem"
+                label=""
+                value=""
+                v-model="message"
+                :rules="messageRules"
               ></v-textarea>
-              <v-checkbox
-                v-model="checkbox"
-                :rules="[(v) => !!v || 'You must agree to continue!']"
-                label="Do you agree?"
-                required
-              ></v-checkbox>
-
-              <v-btn
-                :disabled="!valid"
-                color="success"
-                class="mr-4"
-                @click="validate"
-              >
-                Validate
-              </v-btn>
-
-              <v-btn color="error" class="mr-4" @click="reset">
-                Reset Form
-              </v-btn>
-
-              <v-btn color="warning" @click="resetValidation">
-                Reset Validation
-              </v-btn>
+              <div class="d-flex justify-center">
+                <v-btn
+                  :disabled="!valid"
+                  color="primary"
+                  class="mr-4 text-none"
+                  @click="submit"
+                >
+                  Enviar
+                </v-btn>
+              </div>
             </v-col>
           </v-row>
         </v-form>
@@ -67,29 +77,19 @@ export default {
   data: () => ({
     valid: true,
     name: "",
-    nameRules: [
-      (v) => !!v || "Nome é requirido",
-      (v) => (v && v.length <= 30) || "Nome deve ter menos que 30 caracteres.",
-    ],
+    nameRules: [(v) => !!v || "Nome é requirido"],
     email: "",
     emailRules: [
       (v) => !!v || "E-mail é requirido",
-      (v) => /.+@.+\..+/.test(v) || "E-mail must be valid",
+      (v) => /.+@.+\..+/.test(v) || "E-mail deve ser válido",
     ],
-    select: null,
-    items: ["Item 1", "Item 2", "Item 3", "Item 4"],
-    checkbox: false,
+    message: "",
+    messageRules: [(v) => !!v || "Mensagem é requida"],
   }),
 
   methods: {
     validate() {
       this.$refs.form.validate();
-    },
-    reset() {
-      this.$refs.form.reset();
-    },
-    resetValidation() {
-      this.$refs.form.resetValidation();
     },
   },
 };
