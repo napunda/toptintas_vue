@@ -1,8 +1,11 @@
 <template>
   <div class="form">
     <v-sheet height="600px" color="transparent" class="d-flex justify-end">
-      <v-sheet height="600px" width="50%" color="primary">
+      <v-sheet height="600px" width="50%" color="transparent">
         <v-form ref="form" v-model="valid" lazy-validation>
+          <div class="d-flex justify-center width-50">
+            <h1>FALE CONOSCO</h1>
+          </div>
           <v-row align="center">
             <v-col sm="6">
               <v-row>
@@ -99,5 +102,8 @@ export default {
 .form {
   background-image: url("/img/form-background.jpg");
   background-position: left;
+}
+.width-50 {
+  width: 50% !important;
 }
 </style>
