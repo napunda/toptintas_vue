@@ -10,9 +10,9 @@
             <v-col sm="6">
               <v-row>
                 <v-col cols="6">
-                  <label for="nameid">Nome:</label>
+                  <label for="nameId">Nome:</label>
                   <v-text-field
-                    id="nameid"
+                    id="nameId"
                     solo
                     outlined
                     v-model="name"
@@ -22,9 +22,9 @@
                   ></v-text-field>
                 </v-col>
                 <v-col cols="6">
-                  <label for="lastnameid">Sobrenome:</label>
+                  <label for="lastnameId">Sobrenome:</label>
                   <v-text-field
-                    id="lastnameid"
+                    id="lastnameId"
                     solo
                     outlined
                     v-model="lastname"
@@ -34,9 +34,9 @@
                   ></v-text-field>
                 </v-col>
               </v-row>
-              <label for="mailid">E-mail:</label>
+              <label for="mailId">E-mail:</label>
               <v-text-field
-                id="mailid"
+                id="mailId"
                 solo
                 outlined
                 v-model="email"
@@ -44,9 +44,9 @@
                 label=""
                 required
               ></v-text-field>
-              <label for="messageid">Mensagem:</label>
+              <label for="messageId">Mensagem:</label>
               <v-textarea
-                id="messageid"
+                id="messageId"
                 outlined
                 no-resize
                 messages
