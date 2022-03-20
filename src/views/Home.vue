@@ -4,7 +4,7 @@
     <BrandsSlider />
     <CompanyInfo />
     <Products />
-    <Form />
+    <Contact />
   </div>
 </template>
 
@@ -12,7 +12,7 @@
 import Slide from "../components/Slide.vue";
 import BrandsSlider from "../components/BrandsSlider.vue";
 import CompanyInfo from "../components/CompanyInfo.vue";
-import Form from "../components/Form.vue";
+import Contact from "../components/Contact.vue";
 import Products from "../components/Products.vue";
 export default {
   name: "Home",
@@ -21,7 +21,7 @@ export default {
     Slide,
     BrandsSlider,
     CompanyInfo,
-    Form,
+    Contact,
     Products,
   },
 };
