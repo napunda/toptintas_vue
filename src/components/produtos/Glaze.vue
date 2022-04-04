@@ -1,5 +1,5 @@
 <template>
-  <div class="products my-16">
+  <div class="my-16">
     <v-container class="d-flex flex-column">
       <v-row align="center">
         <v-col cols="3" v-for="(product, i) in products" :key="i">
@@ -18,9 +18,6 @@
           </v-card>
         </v-col>
       </v-row>
-      <div class="d-flex justify-center my-10">
-        <v-btn to="/produtos" rounded color="primary"> Ver todos </v-btn>
-      </div>
     </v-container>
   </div>
 </template>
@@ -93,8 +90,6 @@ h1 {
 }
 img {
   margin-bottom: -250px;
-}
-.card-title {
 }
 .title {
   margin-bottom: 120px;

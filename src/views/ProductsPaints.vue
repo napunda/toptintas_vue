@@ -6,6 +6,9 @@
         <img src="/img/after-title.png" class="mt-1" />
       </div>
       <Paints />
+      <div class="d-flex justify-center my-10">
+        <v-btn to="/produtos" rounded color="primary"> Ver Categorias </v-btn>
+      </div>
     </v-container>
   </div>
 </template>

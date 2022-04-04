@@ -1,9 +1,18 @@
 <template>
   <div>
-    <Complements />
-    <Glaze />
-    <Paints />
-    <Varnish />
+    <v-container>
+      <h2>Complementos</h2>
+      <Complements />
+      <h2>Esmaltes</h2>
+      <Glaze />
+      <h2>Tintas</h2>
+      <Paints />
+      <h2>Vernizes</h2>
+      <Varnish />
+      <div class="d-flex justify-center my-10">
+        <v-btn to="/produtos" rounded color="primary"> Categorias </v-btn>
+      </div>
+    </v-container>
   </div>
 </template>
 
