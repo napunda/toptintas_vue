@@ -7,21 +7,18 @@
             <h1 class="mb-6">A EMPRESA</h1>
             <img src="/img/after-title.png" />
           </div>
-          <div class="text-body text-sm-center">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis
-            provident repellendus, a explicabo, nobis consequatur, officia nulla
-            dicta voluptate aliquam doloremque nihil. Nostrum quam eos soluta ea
-            voluptatibus consequuntur illum! Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Quia enim ut debitis illo eos. Nulla,
-            vero officiis labore modi minus velit deserunt suscipit fugiat quo,
-            assumenda animi sint sapiente quibusdam.
-          </div>
+          <div class="text-body text-sm-center">{{ history }}</div>
         </v-col>
         <v-col cols="2"></v-col>
         <v-col cols="6">
           <v-row>
             <v-col cols="12">
-              <img src="/img/company.png" alt="A empresa" width="100%" />
+              <img
+                :src="companyImage.link"
+                :alt="companyImage.alt"
+                :key="i"
+                width="100%"
+              />
             </v-col>
             <v-col cols="12"> </v-col>
           </v-row>
@@ -30,6 +27,22 @@
     </v-container>
   </div>
 </template>
+
+<script>
+export default {
+  data: () => ({
+    history:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ornare venenatis lacinia. Sed lacinia quam non risus suscipit rhoncus. Proin gravida massa id quam hendrerit, sit amet dapibus elit efficitur. Integer ultrices a purus sed semper. Cras vitae eros sed lacus commodo condimentum ornare et tortor. Aliquam ex magna, pretium nec luctus consectetur, mollis nec nunc. ",
+    companyImage: [
+      {
+        link: "/img/company.png",
+        description: "Top Tintas 2022",
+        alt: "Top Tintas",
+      },
+    ],
+  }),
+};
+</script>
 
 <style scoped>
 .company {

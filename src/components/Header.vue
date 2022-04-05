@@ -54,6 +54,13 @@
 
 <script>
 export default {
+  computed: {
+    logo1() {
+      if (!this.$rest("informations").item) return "";
+
+      return this.files + this.$rest("informations").item.img;
+    },
+  },
   name: "Header",
   data: () => ({
     menus: [
