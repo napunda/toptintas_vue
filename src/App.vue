@@ -12,19 +12,49 @@ import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 
 export default {
-  name: "App",
-
+  data: () => ({
+    loading: true,
+  }),
+  computed: {
+    informations() {
+      return this.$rest("informations").item;
+    },
+    name() {
+      return this.informations.name || "";
+    },
+  },
+  methods: {
+    updateDocumentTitle() {
+      document.title = !this.name
+        ? this.$route.name
+        : `${this.$route.name} - ${this.name}`;
+    },
+  },
+  watch: {
+    $route() {
+      this.updateDocumentTitle();
+    },
+    informations() {
+      this.loading = false;
+    },
+    name() {
+      this.updateDocumentTitle();
+    },
+  },
+  beforeCreate() {
+    this.$rest("informations").get({
+      save: (state, data) => (state.item = data),
+    });
+  },
+  created() {
+    this.updateDocumentTitle();
+  },
   components: {
     Header,
     Footer,
   },
-
-  data: () => ({
-    //
-  }),
 };
 </script>
-
 <style>
 .josefin-sans {
   font-family: "Josefin Sans", sans-serif;

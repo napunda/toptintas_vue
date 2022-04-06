@@ -16,6 +16,7 @@
         </v-btn>
       </v-container>
     </v-sheet>
+    <h1>{{ name }}</h1>
     <v-sheet
       height="104px"
       class="justify-space-between align-center"
@@ -55,7 +56,7 @@
 <script>
 export default {
   computed: {
-    logo1() {
+    logo() {
       if (!this.$rest("informations").item) return "";
 
       return this.files + this.$rest("informations").item.img;
@@ -79,7 +80,7 @@ export default {
       { icon: "fab fa-facebook-f", link: "//facebook.com" },
       { icon: "fab fa-instagram", link: "//facebook.com" },
     ],
-    logo: "/img/logo-top-tintas.png",
+    logoas: "/img/logo-top-tintas.png",
   }),
 };
 </script>
